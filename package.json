@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node bot.js"
   },
-  "author": "Alexander Jose Rodriguez Duven - alexr1712@gmail.com",
+  "author": "Alexander Jose Rodriguez Duven <alexr1712@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.2",
