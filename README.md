@@ -26,5 +26,14 @@ What things you need to install the software and how to install them
 ``` WIP ```
 
 
+## ToDo
+- [x] Inline buttons.
+- [x] Send photo from Telegram to Messenger.
+- [x] Easily change current chat.
+- [ ] Multilanguage option.
+- [ ] Support for Gif.
+- [ ] Support for Stickers of Messenger.
+- [ ] Support for file attachments.
+
 ### Credits
 ``` WIP ```
