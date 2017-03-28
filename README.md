@@ -1,4 +1,4 @@
-![Build Status](https://gitlab.com/AlexR1712/messenger-to-telegram/badges/branch/build.svg "CI Status")
+![Build Status](https://gitlab.com/AlexR1712/messenger-to-telegram/badges/master/build.svg "CI Status")
 
 ![Telegram](http://i.imgur.com/CGGLXFF.png)
 ![Messenger](http://i.imgur.com/VyvJz33.png)
