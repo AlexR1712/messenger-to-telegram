@@ -2,3 +2,4 @@ src/images/*
 src/now.json
 src/node_modules
 docker-compose-prod.yml
+app/data.json
