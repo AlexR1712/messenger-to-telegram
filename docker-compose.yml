@@ -1,11 +1,10 @@
 web:
   build: .
   volumes:
-    - "./src:/src/app"
-  ports:
-    - "3030:3000"
+    - "./app:/usr/src/app"
+    - /usr/src/app/node_modules
   environment:
-    - TELEGRAM_TOKEN="YOUR_BOT_TOKEN"
-    - TELEGRAM_CHAT_ID=YOUR_TELEGRAM_ID
-    - FB_EMAIL="YOUR_FB_EMAIL"
-    - FB_PASSWORD="YOUR_FB_PASSWORD"
+    - TELEGRAM_TOKEN=
+    - TELEGRAM_CHAT_ID=
+    - FB_EMAIL=
+    - FB_PASSWORD=

@@ -5,12 +5,11 @@
   "main": "bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "forever start bot.js"
+    "start": "node bot.js"
   },
   "author": "Alexander Jose Rodriguez Duven <alexr1712@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.2",
     "facebook-chat-api": "^1.3.0",
     "node-telegram-bot-api": "^0.27.0"
   }

@@ -1,2 +1,5 @@
-src/node_modules
-src/npm-debug.log
+.git
+.gitignore
+README.md
+docker-compose.yml
+
