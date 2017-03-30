@@ -23,7 +23,6 @@ function btnReply(text, callback_data) {
     };
 }
 
-//bot.sendMessage(chatId, "Catherine (Messenger): "+'Received your message');
 login({
     email: process.env.FB_EMAIL,
     password: process.env.FB_PASSWORD
@@ -37,7 +36,6 @@ login({
             var name = "";
             for (var prop in ret) {
                 if (ret.hasOwnProperty(prop) && ret[prop].name) {
-                    // api.sendMessage("Happy birthday :)", prop);
                     name = ret[prop].name
                 }
             }
