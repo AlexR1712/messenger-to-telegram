@@ -5,7 +5,7 @@
 
 # Messenger para Telegram
 
-Conecta tu Facebook Messenger a Telegram Facilmente, porque Telegram es mejor, y realizar mensajería e incrementar su productividad.
+Conecta tu Facebook Messenger a Telegram Fścilmente, porque Telegram es mucho mejor para realizar mensajería e incrementar su productividad.
 
 ## Primeros Pasos
 
