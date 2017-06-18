@@ -1,4 +1,5 @@
 ![Build Status](https://gitlab.com/AlexR1712/messenger-to-telegram/badges/master/build.svg "CI Status")
+[![codebeat badge](https://codebeat.co/badges/80259535-4aa4-42fe-a874-89113ddb6d84)](https://codebeat.co/projects/github-com-alexr1712-messenger-to-telegram-master)
 
 ![Telegram](http://i.imgur.com/CGGLXFF.png)
 ![Messenger](http://i.imgur.com/VyvJz33.png)
