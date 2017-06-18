@@ -1,6 +1,6 @@
 module.exports = {
     // Buttons
-    reply: function (text, callback_data) {
+    inlineReply: function (text, callback_data) {
         return {
             reply_markup: {
                 inline_keyboard: [
