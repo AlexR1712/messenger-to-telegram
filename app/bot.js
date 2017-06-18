@@ -1,6 +1,7 @@
 var fs = require('fs');
+var btn = require('./utils');
 var util = require('util');
-var login = require("facebook-chat-api");
+var login = require('facebook-chat-api');
 var TelegramBot = require('node-telegram-bot-api');
 var token = process.env.TELEGRAM_TOKEN;
 var bot = new TelegramBot(token, {
@@ -8,20 +9,7 @@ var bot = new TelegramBot(token, {
 });
 var chatId = process.env.TELEGRAM_CHAT_ID;
 
-var currentThread = "";
-
-function btnReply(text, callback_data) {
-    return {
-        reply_markup: {
-            inline_keyboard: [
-                [{
-                    text: text,
-                    callback_data: callback_data
-                }]
-            ]
-        }
-    };
-}
+var currentThread = '';
 
 login({
     email: process.env.FB_EMAIL,
@@ -29,9 +17,7 @@ login({
 }, function callback(err, api) {
     if (err) return console.error(err);
     api.listen(function callback(err, message) {
-        console.log(message);
-        // api.sendMessage(message.body, message.threadID);
-        api.getUserInfo([message.threadID], (err, ret) => {
+        api.getUserInfo([message.threadID], function (err, ret) {
             if (err) return console.error(err);
             var name = "";
             for (var prop in ret) {
@@ -41,13 +27,13 @@ login({
             }
             switch (message.type) {
                 case "message":
-                    bot.sendMessage(chatId, name + " (Messenger): " + message.body, btnReply('✏️ Responder a ' + name, message.threadID));
+                    bot.sendMessage(chatId, name + ' (Messenger): ' + message.body, btn.inlineReply('✏️ Responder a ' + name, message.threadID));
                     break;
-                case "read_receipt":
-                    bot.sendMessage(chatId, name + " (Messenger): ✅ Visto ✅ ");
+                case 'read_receipt':
+                    bot.sendMessage(chatId, name + ' (Messenger): ✅ Visto ✅');
                     break;
                 default:
-                    bot.sendMessage(chatId, " ERROR: NO EXISTE DE TIPO " + message.type);
+                    bot.sendMessage(chatId, ' ERROR: NO EXISTE DE TIPO '+ message.type);
             }
 
         });
@@ -62,7 +48,7 @@ login({
         bot.sendMessage(msg.from.id, "Escribe tu mensaje a '" + data + "'");
     });
 
-    bot.on('message', (msg) => {
+    bot.on('message', function (msg) {
         console.log(msg.text);
         if (currentThread !== "") {
             api.sendMessage(msg.text, currentThread);
@@ -76,7 +62,7 @@ login({
 
     bot.on('photo', function(msg) {
         if (currentThread !== "") {
-            bot.downloadFile(msg.photo[msg.photo.length - 1].file_id, "./images").then(function(path) {
+            bot.downloadFile(msg.photo[msg.photo.length - 1].file_id, './images').then(function(path) {
                 console.log(path);
                 var msg = {
                     body: "",
