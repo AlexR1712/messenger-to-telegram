@@ -30,6 +30,7 @@ What things you need to install the software and how to install them
 1. Clone this repository in your server/computer
 2. Duplicate `docker-compose.yml` to `docker-compose-prod.yml` or simple run this `cp docker-compose.yml docker-compose-prod.yml`
 3. Edit the enviroment variables with yours in `docker-compose-prod.yml` file, where the `TELEGRAM_CHAT_ID` can be get using the bot [@getidsbot](https://t.me/getidsbot), and the `TELEGRAM_TOKEN` can be obtained from [@BotFather](https://t.me/BotFather), and set `FB_EMAIL` with your facebook email or username, `FB_PASSWORD` place your facebook password.
+![](https://k60.kn3.net/5/0/D/D/7/0/E31.png)
 4. Now launch your bot!, run this: `docker-compose -f docker-compose-prod.yml up`.
 5. Now you will be able to receive and respond to messages from Facebook Messenger from Telegram :-)
 
