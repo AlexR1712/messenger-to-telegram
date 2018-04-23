@@ -1,13 +1,4 @@
-FROM node:boron
- 
-# Create app directory
-#RUN mkdir -p /usr/src/app
-#WORKDIR /usr/src/app
-#RUN ls -la /usr/src
-# Install app dependencies
-#COPY ./app/package.json /usr/src/app/
-#RUN npm install
- 
+FROM node:alpine 
 # Bundle app source
 RUN mkdir -p /usr/src/app
 RUN mkdir -p /usr/src/app/node_modules

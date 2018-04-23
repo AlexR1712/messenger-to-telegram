@@ -1,7 +1,7 @@
 var fs = require('fs');
 var btn = require('./utils');
 var util = require('util');
-var login = require('facebook-chat-api');
+const login = require('facebook-chat-api');
 var TelegramBot = require('node-telegram-bot-api');
 var token = process.env.TELEGRAM_TOKEN;
 var bot = new TelegramBot(token, {
@@ -11,12 +11,25 @@ var chatId = process.env.TELEGRAM_CHAT_ID;
 
 var currentThread = '';
 
-login({
+let credentials = {
     email: process.env.FB_EMAIL,
     password: process.env.FB_PASSWORD
-}, function callback(err, api) {
+};
+
+if (fs.existsSync('appstate.json')) {
+    credentials = {
+        appState: JSON.parse(fs.readFileSync('appstate.json', 'utf8'))
+    }
+}
+
+login(credentials, function callback(err, api) {
     if (err) return console.error(err);
+    // Save Session
+    console.log('Save session to appstate.json');
+    fs.writeFileSync('appstate.json', JSON.stringify(api.getAppState()));
+
     api.listen(function callback(err, message) {
+
         api.getUserInfo([message.threadID], function (err, ret) {
             if (err) return console.error(err);
             var name = "";
