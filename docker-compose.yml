@@ -1,10 +1,12 @@
-web:
-  build: .
-  volumes:
-    - "./app:/usr/src/app"
-    - /usr/src/app/node_modules
-  environment:
-    - TELEGRAM_TOKEN=
-    - TELEGRAM_CHAT_ID=
-    - FB_EMAIL=
-    - FB_PASSWORD=
+version: "3.7"
+services:
+  web:
+    build: .
+    volumes:
+      - "./app:/usr/src/app"
+      - /usr/src/app/node_modules
+    environment:
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+      - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
+      - FB_EMAIL=${FB_EMAIL}
+      - FB_PASSWORD=${FB_PASSWORD}

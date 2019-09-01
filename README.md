@@ -1,8 +1,6 @@
-![Build Status](https://gitlab.com/AlexR1712/messenger-to-telegram/badges/master/build.svg "CI Status")
-[![codebeat badge](https://codebeat.co/badges/80259535-4aa4-42fe-a874-89113ddb6d84)](https://codebeat.co/projects/github-com-alexr1712-messenger-to-telegram-master)
-
 ![Telegram](http://i.imgur.com/CGGLXFF.png)
 ![Messenger](http://i.imgur.com/VyvJz33.png)
+Special thanks to original author [github](https://github.com/AlexR1712/messenger-to-telegram).
 
 # Messenger to Telegram
 
@@ -33,17 +31,20 @@ What things you need to install the software and how to install them
 4. Now launch your bot!, run this: `docker-compose -f docker-compose-prod.yml up`.
 5. Now you will be able to receive and respond to messages from Facebook Messenger from Telegram :-)
 
-
 ## ToDo
+
 - [x] Inline buttons.
 - [x] Send photo from Telegram to Messenger.
+- [x] Send media (photo, video, gif, voice) from Messenger to Telegram.
+- [x] Group and private chat support
 - [x] Easily change current chat.
 - [ ] Show Contact List of Messenger in Telegram
 - [ ] Multilanguage option.
-- [ ] Support for Gif.
-- [ ] Support for Stickers of Messenger.
+- [x] Support for Gif.
+- [x] Support for Stickers of Messenger.
 - [ ] Support for file attachments.
 
 ### Credits
+
 - [@AlexR1712](https://github.com/AlexR1712)
 - [@Schmavery](https://github.com/Schmavery)
