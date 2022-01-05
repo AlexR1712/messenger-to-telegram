@@ -1,6 +1,9 @@
 ![Telegram](http://i.imgur.com/CGGLXFF.png)
 ![Messenger](http://i.imgur.com/VyvJz33.png)
 
+# IMPORTANT
+>Currently this project is not working as expected because the Facebook API breaks some parts of the main dependency.
+
 # Messenger to Telegram
 
 Connect your Facebook Messenger to Telegram Easily, because Telegram is better, and do messaging and increase your productivity.
